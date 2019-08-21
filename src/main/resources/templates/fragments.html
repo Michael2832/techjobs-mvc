@@ -27,5 +27,12 @@
         </div>
     </div>
 
+        <table th:fragment="results" th:each="job : ${jobs}">
+            <tr th:each="item : ${job}">
+                <td th:text="${#strings.capitalizeWords(item.key)}"></td>
+                <td th:text="${item.value}"></td>
+            </tr>
+        </table>
+
 </body>
 </html>
